@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+          <div className='navbar'>
+            <Link href="/">홈</Link>
+            <Link href="/list">목록</Link>
+          </div>
+          <p>현대카드 무이자이벤트중</p>
+        {children}
+        </body>
     </html>
   )
 }
